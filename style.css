@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --card_width: 230px;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 24;
+    --card_medium: 30;
+    --card_large: 40;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 5px;
+    background-color: white;
+    font-family: 'Roboto', 'Times New Roman';
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--card_border_radius);
+}
+
+header {
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+header button {
+    width: 60px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+header input {
+    width: 65%;
+    background-color: hsla(0, 0%, 50%, 0.15);
+}
+
+header input:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    background-image: url("./images/Search.pnsg");
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    padding-left: 30px;
+}
+
+header image, button, input {
+    border-radius: 20px;
+    border: none;
+}
+
+.pin_container {
+    width: 80vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+}
+
+.card {
+    padding: 0;
+    margin: 35px 10px;
+    border-radius: var(--card_border_radius);
+}
+
+.card_small {
+    grid-row-end: span var(--card_small);
+}
+
+.card_medium {
+    grid-row-end: span var(--card_medium);
+}
+
+.card_large {
+    grid-row-end: span var(--card_large);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img:hover {
+    filter: brightness(50%);
+}
+
+.card .profileImage {
+    width: 26px;
+    height: 26px;
+    
+}
+
+.card .profileName {
+    display: inline;
+    position: relative;
+    bottom: 6px;
+}
+
+.card
+
+
+.card {
+    position: relative;
+  }
+  
+  .text {
+    position: absolute;
+    color: white;
+    padding: 4px;
+    display: none;
+    background-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+  }
+  
+  .card:hover .text {
+    display: block;
+    filter: brightness(150%);
+
+  }
+  
+  .top-left {
+    top: 15px;
+    left: 13px;
+  }
+  
+  .top-right {
+    top: 12px;
+    right: 13px;
+    border: 2px solid red;
+    border-radius: var(--card_border_radius);
+    background-color: red;
+  }
+  
+  .bottom-right {
+    bottom: 8px;
+    right: 8px;
+  }
+
+  .bottom-right img {
+    width: 20px;
+  }
+
+  footer {
+    height: 20px;
+  }
+
+@media (max-width: 500px) {
+    header .pin {
+        display: none;
+    }    
+}

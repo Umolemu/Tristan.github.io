@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/favicon.png">
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+      var filterInput = document.getElementById("filterInput");
+
+      filterInput.addEventListener("input", function() {
+      var filterValue = filterInput.value.toLowerCase();
+      var cards = document.getElementsByClassName("card");
+
+      for (var i = 0; i < cards.length; i++) {
+        var card = cards[i];
+        var nameElement = card.querySelector("p, h5");
+        var name = nameElement.textContent.toLowerCase();
+
+      if (name.includes(filterValue)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  });
+});
+
+    </script>
+
+</head>
+
+<body>
+    
+  <header>
+    
+    <img src="./images/favicon.png" alt="" class="pin">
+    
+    <button id="button1">Home</button>
+    <button id="button2">Create</button>
+    
+    <input type="text" id="filterInput" placeholder="Search">
+    
+    <img src="./images/bell.png" alt="">
+    <img src="./images/chat.png" alt="">
+    
+    <img src="./images/profile.png" alt="">
+
+  </header>
+
+  <div class="pin_container">
+      <div class="card card_small photography">
+        <img src="https://images.unsplash.com/photo-1682872872619-fc9f3f0a2ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60" alt="">  
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <h5>a person pouring something into a bowl</h5>
+        <img src="https://images.unsplash.com/profile-fb-1639049750-83eec9bd0685.jpg?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" class="profileImage">
+        <p class="profileName">Ju Lianna</p>
+      </div>
+      
+      <div class="card card_large Fashion">
+        <img src="https://i.pinimg.com/originals/0e/b5/d4/0eb5d40de268f48c828dd5c00700ea80.jpg">
+          <div class="text top-left">Fashion</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <p>manuel</p>
+      </div>
+      
+      <div class="card card_medium Fashion">
+        <img src="https://images.unsplash.com/photo-1681742030245-2efc2f04ef9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">Fashion</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div>  
+        <p>Will Rocha</p>
+      </div>
+        
+
+      <div class="card card_medium Art">
+        <img src="https://images.unsplash.com/photo-1682794496831-81a52c8e9136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80">
+          <div class="text top-left">Art</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div>
+        <p>HI! ESTUDIO</p>
+      </div>
+      
+      <div class="card card_large photography">
+        <img src="https://images.unsplash.com/photo-1682685797828-d3b2561deef4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div>  
+        <p>NEOM</p>
+      </div>
+      
+      <div class="card card_small Food">
+        <img src="https://plus.unsplash.com/premium_photo-1681401570651-4e38f12952b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">Food</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div>  
+          <h5>a person holding a bowl of rice next to eggs</h5>
+        <p>Unsplash+</p>
+      </div>
+
+      
+      <div class="card card_small photography">
+        <img src="https://images.unsplash.com/photo-1682880279219-5e1434044a64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div>  
+        <p>Alex Shuper</p>
+      </div>
+      
+      <div class="card card_large sport">
+        <img src="https://images.unsplash.com/photo-1682887524135-9b7f423c4f00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">sport</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div>  
+          <h5>A man swimming in water</h5>
+        <img src="https://images.unsplash.com/profile-1682288783172-237700af9fa4image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" class="profileImage">
+        <p class="profileName">Levi Arnold</p>
+      </div>
+      
+      <div class="card card_small photography">
+        <img src="https://images.unsplash.com/photo-1682842098670-ace3aa03f719?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div>  
+
+        <img src="https://images.unsplash.com/profile-1571077135816-5c640e5080fbimage?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" class="profileImage">
+        <p class="profileName">Hans Veth</p>
+      </div>
+
+      
+      <div class="card card_large food">
+        <img src="https://plus.unsplash.com/premium_photo-1680546331004-5206cde02839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">food</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <p>Unsplash+</p>
+      </div>
+      
+      <div class="card card_medium Art">
+        <img src="https://images.unsplash.com/photo-1682794496831-81a52c8e9136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80">
+          <div class="text top-left">Art</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div>  
+        <p>HI! ESTUDIO</p>
+      </div>
+      
+      <div class="card card_small photography">
+        <img src="https://images.unsplash.com/photo-1682687220208-22d7a2543e88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <h5>Overview of a dusk sky</h5>
+      </div>
+
+      
+      <div class="card card_small Food">
+        <img src="https://images.unsplash.com/photo-1682264933304-1943bfa8df38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">Food</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <p>Joanie Simon</p>
+      </div>
+      
+      <div class="card card_medium photography">
+        <img src="https://images.unsplash.com/photo-1682921749597-b62356ff9be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <img src="https://images.unsplash.com/profile-1571077135816-5c640e5080fbimage?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" class="profileImage">
+        <p class="profileName">Luca Calderone</p>
+      </div>
+      
+      <div class="card card_large photography">
+        <img src="https://plus.unsplash.com/premium_photo-1669562720277-b12b71e55a63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <p>Unsplash</p>
+      </div>
+
+      <div class="card card_medium Home">
+        <img src="https://images.unsplash.com/photo-1682700370236-3c7cc7469b4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">Home</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <h5>A black and white photo of ocean waves</h5>
+        <img src="https://images.unsplash.com/profile-1604057635565-6d79cfa085adimage?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" class="profileImage">
+        <p class="profileName">Igor</p>
+      </div>
+      
+      <div class="card card_large Home">
+        <img src="https://images.unsplash.com/photo-1682841451836-af1f9194b9a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+        <div class="text top-left">Home</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div>  
+        <p>Mike Hindie</p>
+      </div>
+      
+      <div class="card card_small Food">
+        <img src="https://plus.unsplash.com/premium_photo-1669984998288-5d01da014234?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">Food</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <p>Unsplash+</p>
+      </div>
+
+      <div class="card card_large Fashion">
+        <img src="https://images.unsplash.com/photo-1682704786539-c5de60e43a86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">Fashion</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <h5>Check my new outfit</h5>
+        <img src="https://images.unsplash.com/profile-1676576394134-66e5c24cfd4cimage?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" class="profileImage">
+        <p class="profileName">Megan Ruth</p>
+      </div>
+      
+      <div class="card card_large photography">
+        <img src="https://images.unsplash.com/photo-1682790651510-1e06b631f567?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <p>Jonny Gios</p>
+      </div>
+      
+      <div class="card card_medium photography">
+        <img src="https://images.unsplash.com/photo-1682936496532-00429ddd7b6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <p>Nico Iseli</p>
+      </div>
+
+      <div class="card card_medium photography">
+        <img src="https://plus.unsplash.com/premium_photo-1669986386171-5f54aee0a73b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+          <div class="text top-left">photography</div>
+          <div class="text top-right">Save</div>
+          <div class="text bottom-right"><img src="./images/upload.png" alt=""></div> 
+        <p>😊</p>
+      </div>
+    
+      <footer>
+
+    </footer>
+  </div>
+</body>
+
+</html>
